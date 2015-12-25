@@ -5,13 +5,13 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool", "MySchool\MySchool.csproj", "{454D4A29-D3FF-4D8B-AF22-1DEBD3CD632B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.API", "..\..\..\..\Projects\Demos\Core\Core.API\MySchool.API.csproj", "{7AEEF097-F5C1-4E24-8204-B422F80E2F2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.API", "MySchool.API\MySchool.API.csproj", "{7AEEF097-F5C1-4E24-8204-B422F80E2F2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Data", "..\..\..\..\Projects\Demos\Core\Core.Data\MySchool.Data.csproj", "{04CE23DF-0D25-48A5-844F-F01DA10481D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Data", "MySchool.Data\MySchool.Data.csproj", "{04CE23DF-0D25-48A5-844F-F01DA10481D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Infrastructure", "..\..\..\..\Projects\Demos\Core\Core.Infrastructure\MySchool.Infrastructure.csproj", "{96F44B15-4238-4635-90F7-AF70EEF44556}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Infrastructure", "MySchool.Infrastructure\MySchool.Infrastructure.csproj", "{96F44B15-4238-4635-90F7-AF70EEF44556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Model", "..\..\..\..\Projects\Demos\Core\Core.Model\MySchool.Model.csproj", "{0C9E075F-0DE5-413B-B6D4-436D677F41F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchool.Model", "MySchool.Model\MySchool.Model.csproj", "{0C9E075F-0DE5-413B-B6D4-436D677F41F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
