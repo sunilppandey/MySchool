@@ -7,8 +7,8 @@
     <ProjectGuid>{0C9E075F-0DE5-413B-B6D4-436D677F41F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Model</RootNamespace>
-    <AssemblyName>Core.Model</AssemblyName>
+    <RootNamespace>MySchool.Model</RootNamespace>
+    <AssemblyName>MySchool.Model</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

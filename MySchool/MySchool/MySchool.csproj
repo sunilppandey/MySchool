@@ -71,6 +71,7 @@
     <Content Include="app\views\about.html" />
     <Content Include="app\views\layout\sidebar.html" />
     <Content Include="app\views\layout\topbar.html" />
+    <Content Include="app\views\school\schools.html" />
     <Content Include="packages.config" />
     <Content Include="content\fonts\fontawesome-webfont.eot" />
     <Content Include="content\fonts\fontawesome-webfont.ttf" />

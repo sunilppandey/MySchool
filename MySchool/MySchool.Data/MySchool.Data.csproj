@@ -7,8 +7,8 @@
     <ProjectGuid>{04CE23DF-0D25-48A5-844F-F01DA10481D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Data</RootNamespace>
-    <AssemblyName>Core.Data</AssemblyName>
+    <RootNamespace>MySchool.Data</RootNamespace>
+    <AssemblyName>MySchool.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -183,11 +183,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core.Infrastructure\MySchool.Infrastructure.csproj">
+    <ProjectReference Include="..\MySchool.Infrastructure\MySchool.Infrastructure.csproj">
       <Project>{96f44b15-4238-4635-90f7-af70eef44556}</Project>
       <Name>MySchool.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core.Model\MySchool.Model.csproj">
+    <ProjectReference Include="..\MySchool.Model\MySchool.Model.csproj">
       <Project>{0c9e075f-0de5-413b-b6d4-436d677f41f1}</Project>
       <Name>MySchool.Model</Name>
     </ProjectReference>

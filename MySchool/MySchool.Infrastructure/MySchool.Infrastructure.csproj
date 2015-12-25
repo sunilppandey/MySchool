@@ -7,8 +7,8 @@
     <ProjectGuid>{96F44B15-4238-4635-90F7-AF70EEF44556}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Infrastructure</RootNamespace>
-    <AssemblyName>Core.Infrastructure</AssemblyName>
+    <RootNamespace>MySchool.Infrastructure</RootNamespace>
+    <AssemblyName>MySchool.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
