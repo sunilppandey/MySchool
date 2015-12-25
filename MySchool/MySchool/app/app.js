@@ -1,4 +1,4 @@
-﻿var app = angular.module('mySchoolAuthApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
+﻿var app = angular.module('mySchoolAuthApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'angularValidator']);
 
 app.config(function ($routeProvider) {
 
@@ -30,6 +30,11 @@ app.config(function ($routeProvider) {
     $routeProvider.when("/tokens", {
         controller: "tokensManagerController",
         templateUrl: "/app/views/tokens.html"
+    });
+
+    $routeProvider.when("/about", {
+        controller: "aboutController",
+        templateUrl: "/app/views/about.html"
     });
 
     $routeProvider.otherwise({ redirectTo: "/home" });

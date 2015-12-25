@@ -66,11 +66,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\directives\sidebar.js" />
+    <Content Include="app\directives\topbar.js" />
+    <Content Include="app\views\about.html" />
+    <Content Include="app\views\layout\sidebar.html" />
+    <Content Include="app\views\layout\topbar.html" />
     <Content Include="packages.config" />
     <Content Include="content\fonts\fontawesome-webfont.eot" />
     <Content Include="content\fonts\fontawesome-webfont.ttf" />
     <Content Include="content\fonts\fontawesome-webfont.woff" />
     <Content Include="content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="scripts\angular-validator.js" />
+    <Content Include="scripts\angular-validator.min.js" />
     <Content Include="scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -106,12 +113,6 @@
     <Content Include="content\css\loading-bar.min.css" />
     <Content Include="content\css\main.css" />
     <Content Include="content\css\site.css" />
-    <Content Include="content\css\style-switcher.css" />
-    <Content Include="content\css\theme-black.css" />
-    <Content Include="content\css\theme-blue.css" />
-    <Content Include="content\css\theme-brown.css" />
-    <Content Include="content\css\theme-default.css" />
-    <Content Include="content\css\theme-white.css" />
     <Content Include="content\css\toaster.css" />
     <Content Include="content\css\toaster.min.css" />
     <Content Include="content\fonts\fontawesome-webfont.svg" />
@@ -147,9 +148,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
-    <Folder Include="app\views\layout\" />
     <Folder Include="toBeRemoved\" />
   </ItemGroup>
   <PropertyGroup>

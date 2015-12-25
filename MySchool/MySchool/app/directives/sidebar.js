@@ -1,0 +1,9 @@
+﻿'use strict';
+app.directive('sideBar', sideBar);
+function sideBar() {
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: '/app/views/layout/sidebar.html'
+    }
+}
