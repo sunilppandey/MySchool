@@ -81,6 +81,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
       <Private>True</Private>
@@ -104,10 +105,6 @@
     <Compile Include="Entities\ApplicationUserManager.cs" />
     <Compile Include="Entities\ApplicationUserStore.cs" />
     <Compile Include="Entities\IdentityModels.cs" />
-    <Compile Include="Mappers\ApplicationUserMapper.cs" />
-    <Compile Include="Mappers\BookMapper.cs" />
-    <Compile Include="Mappers\ClientMapper.cs" />
-    <Compile Include="Mappers\RefreshTokenMapper.cs" />
     <Compile Include="Migrations\201512101619053_InitialCreate.cs" />
     <Compile Include="Migrations\201512101619053_InitialCreate.Designer.cs">
       <DependentUpon>201512101619053_InitialCreate.cs</DependentUpon>
@@ -139,6 +136,26 @@
     <Compile Include="Migrations\201512180248589_RefreshTokenAdded.cs" />
     <Compile Include="Migrations\201512180248589_RefreshTokenAdded.Designer.cs">
       <DependentUpon>201512180248589_RefreshTokenAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512261248226_ComboListAdded.cs" />
+    <Compile Include="Migrations\201512261248226_ComboListAdded.Designer.cs">
+      <DependentUpon>201512261248226_ComboListAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512261316536_ComboListAdded1.cs" />
+    <Compile Include="Migrations\201512261316536_ComboListAdded1.Designer.cs">
+      <DependentUpon>201512261316536_ComboListAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512261337060_ComboListAdded2.cs" />
+    <Compile Include="Migrations\201512261337060_ComboListAdded2.Designer.cs">
+      <DependentUpon>201512261337060_ComboListAdded2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512261355334_ComboListAdded3.cs" />
+    <Compile Include="Migrations\201512261355334_ComboListAdded3.Designer.cs">
+      <DependentUpon>201512261355334_ComboListAdded3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512261609051_ComboListAdded5.cs" />
+    <Compile Include="Migrations\201512261609051_ComboListAdded5.Designer.cs">
+      <DependentUpon>201512261609051_ComboListAdded5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,6 +198,21 @@
     <EmbeddedResource Include="Migrations\201512180248589_RefreshTokenAdded.resx">
       <DependentUpon>201512180248589_RefreshTokenAdded.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512261248226_ComboListAdded.resx">
+      <DependentUpon>201512261248226_ComboListAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512261316536_ComboListAdded1.resx">
+      <DependentUpon>201512261316536_ComboListAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512261337060_ComboListAdded2.resx">
+      <DependentUpon>201512261337060_ComboListAdded2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512261355334_ComboListAdded3.resx">
+      <DependentUpon>201512261355334_ComboListAdded3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512261609051_ComboListAdded5.resx">
+      <DependentUpon>201512261609051_ComboListAdded5.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MySchool.Infrastructure\MySchool.Infrastructure.csproj">
@@ -191,6 +223,13 @@
       <Project>{0c9e075f-0de5-413b-b6d4-436d677f41f1}</Project>
       <Name>MySchool.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MySchool.Shared\MySchool.Shared.csproj">
+      <Project>{360dc53e-eb95-49a7-861c-6998382c4e74}</Project>
+      <Name>MySchool.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

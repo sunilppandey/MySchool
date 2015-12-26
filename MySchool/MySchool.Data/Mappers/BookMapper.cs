@@ -16,7 +16,6 @@ namespace MySchool.Data.Mappers
 
             HasKey(x => x.Id);
             Property(x => x.Title).IsRequired();
-            
             Property(x => x.Title).HasMaxLength(100);
 
             Property(x => x.Author).IsRequired();

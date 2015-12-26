@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.Entity;
-using MySchool.Data.Mappers;
+using MySchool.Model.Mappers;
 using MySchool.Model.Entities;
 using System.Data.Entity.Infrastructure;
 using MySchool.Model;
 using System.Data.Entity.Validation;
 using System.ComponentModel.DataAnnotations;
 using MySchool.Infrastructure;
+using System.Web;
 
 namespace MySchool.Data
 {
@@ -35,6 +36,9 @@ namespace MySchool.Data
         /// Provides access to the collection of refreshToken in the system.
         /// </summary>
         public DbSet<RefreshToken> RefreshToken { get; set; }
+        public DbSet<Book> Book { get; set; }
+        public DbSet<ComboList> ComboList { get; set; }
+        public DbSet<ComboListValue> ComboListValue { get; set; }
 
         public virtual int Commit()
         {
@@ -43,15 +47,19 @@ namespace MySchool.Data
             try
             {
                 var modified = ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added);
+                string currentUser = HttpContext.Current.User.Identity.Name;
+
                 foreach (DbEntityEntry item in modified)
                 {
-                    var changedOrAddedItem = item.Entity as IDateTracking;
+                    var changedOrAddedItem = item.Entity as IAuditTracking;
                     if (changedOrAddedItem != null)
                     {
                         if (item.State == EntityState.Added)
                         {
+                            changedOrAddedItem.CreatedBy = currentUser;
                             changedOrAddedItem.CreatedDate = DateTime.Now;
                         }
+                        changedOrAddedItem.ModifiedBy = currentUser;
                         changedOrAddedItem.ModifiedDate = DateTime.Now;
                     }
                 }
@@ -79,12 +87,45 @@ namespace MySchool.Data
             }
         }
 
+        /// <summary>
+        /// Wrapper for SaveChanges adding the Validation Messages to the generated exception
+        /// </summary>
+        /// <param name="context">The context.</param>
+        private void SaveChanges(DbContext context)
+        {
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var failure in ex.EntityValidationErrors)
+                {
+                    sb.AppendFormat("{0} failed validation\n", failure.Entry.Entity.GetType());
+                    foreach (var error in failure.ValidationErrors)
+                    {
+                        sb.AppendFormat("- {0} : {1}", error.PropertyName, error.ErrorMessage);
+                        sb.AppendLine();
+                    }
+                }
+
+                throw new DbEntityValidationException(
+                    "Entity Validation Failed - errors follow:\n" +
+                    sb.ToString(), ex
+                ); // Add the original exception as the innerException
+            }
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ApplicationUserMapper());
             modelBuilder.Configurations.Add(new BookMapper());
             modelBuilder.Configurations.Add(new ClientMapper());
             modelBuilder.Configurations.Add(new RefreshTokenMapper());
+            modelBuilder.Configurations.Add(new ComboListMapper());
+            modelBuilder.Configurations.Add(new ComboListValueMapper());
 
             base.OnModelCreating(modelBuilder);
         }
